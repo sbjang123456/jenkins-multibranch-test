@@ -1,19 +1,23 @@
 pipeline {
     agent any
+    tools {
+        nodejs "NodeJS 20.11.0"
+    }
     stages {
-        stage('build') {
+        stage("Install") {
             steps {
-                echo 'building the application...'
+                sh "npm i -g pnpm"
+                sh "pnpm i"
             }
         }
-        stage('test') {
+        stage("Build") {
             steps {
-                echo 'testing the application...'
+                sh "pnpm build"
             }
         }
-        stage('deploy') {
+        stage("Start") {
             steps {
-                echo 'deploying the application...'
+                sh "pnpm start"
             }
         }
     }
