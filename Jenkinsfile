@@ -18,13 +18,13 @@ pipeline {
         }
         stage("Start") {
             steps {
-                sh "pnpm start:prod"
+                sh "pnpm start"
             }
         }
-        stage("pm2 list") {
-            steps {
-                sh "pm2 ls"
-            }
-        }
+        // stage("pm2 list") {
+        //     steps {
+        //         sh "pm2 ls"
+        //     }
+        // }
     }
 }
