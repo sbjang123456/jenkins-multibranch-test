@@ -21,5 +21,10 @@ pipeline {
                 sh "pnpm start:prod"
             }
         }
+        stage("pm2 list") {
+            steps {
+                sh "pm2 ls"
+            }
+        }
     }
 }

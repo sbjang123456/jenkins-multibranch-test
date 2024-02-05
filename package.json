@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "start:prod": "pm2 delete all && pm2 --name multibranch-test start pnpm -- start --port 3000",
+    "start:prod": "pm2 --name multibranch-test start pnpm -- start --port 3000",
     "lint": "next lint"
   },
   "dependencies": {
