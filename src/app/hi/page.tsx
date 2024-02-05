@@ -1,3 +1,3 @@
 export default function Hi() {
-  return <div>hi</div>;
+  return <div>hi1</div>;
 }
