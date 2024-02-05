@@ -6,6 +6,7 @@ pipeline {
     stages {
         stage("Install") {
             steps {
+                sh "npm i -g pm2"
                 sh "npm i -g pnpm"
                 sh "pnpm i"
             }
@@ -17,7 +18,7 @@ pipeline {
         }
         stage("Start") {
             steps {
-                sh "pnpm start"
+                sh "pnpm start:prod"
             }
         }
     }
