@@ -18,7 +18,7 @@ pipeline {
         }
         stage("Start") {
             steps {
-                sh "pnpm start"
+                sh "pnpm start:prod"
             }
         }
         // stage("pm2 list") {
